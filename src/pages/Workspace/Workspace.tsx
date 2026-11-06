@@ -6,6 +6,7 @@ import { AppHeader } from '@/components/layout/AppHeader';
 import { ThreePaneLayout } from '@/components/layout/ThreePaneLayout';
 import { JdForm } from '@/components/jd/JdForm';
 import { QuestionPanel } from '@/components/questions/QuestionPanel';
+import { ResumeViewer } from '@/components/resume/ResumeViewer';
 
 export function Workspace() {
   return (
@@ -20,6 +21,7 @@ export function Workspace() {
         }
         center={
           <>
+            <ResumeViewer />
             <InterviewBanner />
             <QuestionPanel />
             <ChatPanel />

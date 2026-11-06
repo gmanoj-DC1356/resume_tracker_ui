@@ -4,6 +4,9 @@ import axios from 'axios';
 // single client so auth headers, error handling and base URL stay in one place.
 export const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_BASE_URL ?? '/api',
+  // Off by default. Turn on in .env.local only for local development against the Django
+  // session login, until JWT sign-in replaces it.
+  withCredentials: import.meta.env.VITE_API_WITH_CREDENTIALS === 'true',
   timeout: 15000,
   headers: {
     'Content-Type': 'application/json',

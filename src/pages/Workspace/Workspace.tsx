@@ -1,4 +1,3 @@
-import { CandidateList } from '@/components/candidates/CandidateList';
 import { ChatPanel } from '@/components/chat/ChatPanel';
 import { InterviewBanner } from '@/components/highlights/InterviewBanner';
 import { HistorySidebar } from '@/components/history/HistorySidebar';
@@ -6,6 +5,7 @@ import { AppHeader } from '@/components/layout/AppHeader';
 import { ThreePaneLayout } from '@/components/layout/ThreePaneLayout';
 import { JdForm } from '@/components/jd/JdForm';
 import { QuestionPanel } from '@/components/questions/QuestionPanel';
+import { DemoCandidateList } from '@/components/resume/DemoCandidateList';
 import { ResumeViewer } from '@/components/resume/ResumeViewer';
 
 export function Workspace() {
@@ -16,7 +16,8 @@ export function Workspace() {
         left={
           <>
             <JdForm />
-            <CandidateList />
+            {/* Starter list until ranked matches exist; swap back to <CandidateList /> then. */}
+            <DemoCandidateList />
           </>
         }
         center={

@@ -57,6 +57,16 @@ export interface ResumeDetail {
   education: string;
 }
 
+// A candidate card before matching: the resume to open plus the facts shown on the card.
+export interface CandidateSummary {
+  resumeId: string;
+  name: string;
+  role: string;
+  yearsExperience: number;
+  skills: string[];
+  summary: string;
+}
+
 export interface InterviewQuestion {
   text: string;
   skill?: string;
